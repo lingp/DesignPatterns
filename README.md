@@ -1,7 +1,7 @@
 # designmode
-设计模式练习
+##设计模式练习
 
-设计模式分类
+###常用设计模式分类
 
     **1.创建型   用于处理对象的实例化**
         (1)抽象工厂模式（Abstract Factory）
@@ -45,7 +45,7 @@
          (2)服务定位器模式（Service Locator）
          (3)资源库模式（Repository）
     
-    
+内容来源于http://laravelacademy.org/resources/design-patterns__    
     
     
     
