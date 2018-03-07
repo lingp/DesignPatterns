@@ -45,7 +45,10 @@
          (2)服务定位器模式（Service Locator）
          (3)资源库模式（Repository）
     
-内容来源于http://laravelacademy.org/resources/design-patterns__    
+内容来源于
+git@github.com:lingp/DesignPatterns.git
+http://laravelacademy.org/resources/design-patterns
+__    
     
     
     
