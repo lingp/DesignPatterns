@@ -6,7 +6,7 @@ define('ROOT', __DIR__);
 require_once ROOT . DIRECTORY_SEPARATOR . 'Tools' . DIRECTORY_SEPARATOR .  'Loader.php';
 spl_autoload_register("Loader::autoload");
 
-
+//抽象工厂模式
 $jsonObj = new \Creational\AbstractFactory\JsonFactory();
 $htmObj = new \Creational\AbstractFactory\HtmlFactory();
 
