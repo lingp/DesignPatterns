@@ -14,3 +14,10 @@ $jText = $jsonObj->createText('抽象工厂模式');
 $hText = $htmObj->createText("抽象工厂模式");
 var_dump($jText->render());
 var_dump($hText->render());
+
+//建造者模式
+$directorObj = new \Creational\Builder\Director();
+$carObj = $directorObj->build(new \Creational\Builder\CarBuilder());
+$bikeObj = $directorObj->build(new \Creational\Builder\BikeBuilder());
+var_export($carObj);
+var_export($bikeObj);
