@@ -21,3 +21,15 @@ $carObj = $directorObj->build(new \Creational\Builder\CarBuilder());
 $bikeObj = $directorObj->build(new \Creational\Builder\BikeBuilder());
 var_export($carObj);
 var_export($bikeObj);
+
+
+$factory = [
+    new \Creational\FactoryMethod\ItalianFactory(),
+    new \Creational\FactoryMethod\GermanFactory()
+];
+
+foreach ($factory as $v)
+{
+    $obj = $v->create(\Creational\FactoryMethod\FactoryMethod::FAST);
+    $obj->setColor("green");
+}
