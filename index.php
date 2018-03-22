@@ -33,3 +33,38 @@ foreach ($factory as $v)
     $obj = $v->create(\Creational\FactoryMethod\FactoryMethod::FAST);
     $obj->setColor("green");
 }
+
+echo "<br> ======================================== <br>";
+
+$pool = new \Creational\Pool\Pool('\Creational\Pool\Tests\TestWorker');
+$worker = $pool->get();
+echo $worker->id . "<br>";
+
+$worker->id = 5;
+$pool->dispose($worker);
+
+echo $pool->get()->id . "<br>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
