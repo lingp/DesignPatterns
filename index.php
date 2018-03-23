@@ -45,6 +45,10 @@ $pool->dispose($worker);
 
 echo $pool->get()->id . "<br>";
 
+$simple_factory = new \Creational\SimpleFactory\ConcreteFactory();
+$vehicle_obj = $simple_factory->createVehicle('bicycle');
+$vehicle_obj->driveTo('world');
+
 
 
 
