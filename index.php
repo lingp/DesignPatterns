@@ -6,48 +6,61 @@ define('ROOT', __DIR__);
 require_once ROOT . DIRECTORY_SEPARATOR . 'Tools' . DIRECTORY_SEPARATOR .  'Loader.php';
 spl_autoload_register("Loader::autoload");
 
-//抽象工厂模式
-$jsonObj = new \Creational\AbstractFactory\JsonFactory();
-$htmObj = new \Creational\AbstractFactory\HtmlFactory();
+////抽象工厂模式
+//$jsonObj = new \Creational\AbstractFactory\JsonFactory();
+//$htmObj = new \Creational\AbstractFactory\HtmlFactory();
+//
+//$jText = $jsonObj->createText('抽象工厂模式');
+//$hText = $htmObj->createText("抽象工厂模式");
+//var_dump($jText->render());
+//var_dump($hText->render());
+//
+////建造者模式
+//$directorObj = new \Creational\Builder\Director();
+//$carObj = $directorObj->build(new \Creational\Builder\CarBuilder());
+//$bikeObj = $directorObj->build(new \Creational\Builder\BikeBuilder());
+//var_export($carObj);
+//var_export($bikeObj);
+//
+//
+//$factory = [
+//    new \Creational\FactoryMethod\ItalianFactory(),
+//    new \Creational\FactoryMethod\GermanFactory()
+//];
+//
+//foreach ($factory as $v)
+//{
+//    $obj = $v->create(\Creational\FactoryMethod\FactoryMethod::FAST);
+//    $obj->setColor("green");
+//}
+//
+//echo "<br> ======================================== <br>";
+//
+//$pool = new \Creational\Pool\Pool('\Creational\Pool\Tests\TestWorker');
+//$worker = $pool->get();
+//echo $worker->id . "<br>";
+//
+//$worker->id = 5;
+//$pool->dispose($worker);
+//
+//echo $pool->get()->id . "<br>";
+//
+//$simple_factory = new \Creational\SimpleFactory\ConcreteFactory();
+//$vehicle_obj = $simple_factory->createVehicle('bicycle');
+//$vehicle_obj->driveTo('world');
+//
+//$singleton1 = \Creational\Singleton\Singleton::getInstance();
+//$singleton2 = \Creational\Singleton\Singleton::getInstance();
+//
+//
+//var_export($singleton1 == $singleton2);
 
-$jText = $jsonObj->createText('抽象工厂模式');
-$hText = $htmObj->createText("抽象工厂模式");
-var_dump($jText->render());
-var_dump($hText->render());
+$book = new \Structural\Adapter\Book();
+$ebook = new \Structural\Adapter\EBookAdapter(new \Structural\Adapter\Kindle());
 
-//建造者模式
-$directorObj = new \Creational\Builder\Director();
-$carObj = $directorObj->build(new \Creational\Builder\CarBuilder());
-$bikeObj = $directorObj->build(new \Creational\Builder\BikeBuilder());
-var_export($carObj);
-var_export($bikeObj);
+$book->open();
+$ebook->open();
 
-
-$factory = [
-    new \Creational\FactoryMethod\ItalianFactory(),
-    new \Creational\FactoryMethod\GermanFactory()
-];
-
-foreach ($factory as $v)
-{
-    $obj = $v->create(\Creational\FactoryMethod\FactoryMethod::FAST);
-    $obj->setColor("green");
-}
-
-echo "<br> ======================================== <br>";
-
-$pool = new \Creational\Pool\Pool('\Creational\Pool\Tests\TestWorker');
-$worker = $pool->get();
-echo $worker->id . "<br>";
-
-$worker->id = 5;
-$pool->dispose($worker);
-
-echo $pool->get()->id . "<br>";
-
-$simple_factory = new \Creational\SimpleFactory\ConcreteFactory();
-$vehicle_obj = $simple_factory->createVehicle('bicycle');
-$vehicle_obj->driveTo('world');
 
 
 
