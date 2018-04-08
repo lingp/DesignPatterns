@@ -55,13 +55,30 @@ spl_autoload_register("Loader::autoload");
 //
 //var_export($singleton1 == $singleton2);
 
-$book = new \Structural\Adapter\Book();
-$ebook = new \Structural\Adapter\EBookAdapter(new \Structural\Adapter\Kindle());
+//$book = new \Structural\Adapter\Book();
+//$ebook = new \Structural\Adapter\EBookAdapter(new \Structural\Adapter\Kindle());
+//
+//$book->open();
+//$ebook->open();
 
-$book->open();
-$ebook->open();
 
+//$car_obj = new \Structural\Bridge\Car(new \Structural\Bridge\Produce(), new \Structural\Bridge\Assemble());
+//$motor_obj = new \Structural\Bridge\Motorcycle(new \Structural\Bridge\Produce(), new \Structural\Bridge\Assemble());
+//
+//$car_obj->manufacture();
+//$motor_obj->manufacture();
 
+$form = new \Structural\Composite\Form();
+$form->addElement(new \Structural\Composite\TextElement());
+$form->addElement(new \Structural\Composite\InputElement());
+
+$form2 = new \Structural\Composite\Form();
+$form2->addElement(new \Structural\Composite\TextElement());
+$form2->addElement(new \Structural\Composite\InputElement());
+
+$form->addElement($form2);
+
+echo $form->render();
 
 
 
